@@ -1,0 +1,21 @@
+<div class="col-md-8">
+    <h2>user Details</h2>
+    <div class="table-responsive table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Emp Id</th>
+                    <th>Emp Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of emplist">
+                    <td> {{emp.id}}</td>
+                    <td>{{emp.name}}</td>
+                    <button class="btn btn-info" (click)="editEmp(emp)">Edit</button>
+                    <button style="margin-left: 20px" class="btn btn-info" (click)="delete(emp)">Delete</button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
